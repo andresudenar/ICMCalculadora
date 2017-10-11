@@ -1,0 +1,788 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="5dp">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/edad"
+                android:textSize="36sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="0.23"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/sexo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/sexo"
+                android:textSize="36sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="0.503"
+                app:layout_constraintLeft_toRightOf="@+id/text"
+                app:layout_constraintRight_toLeftOf="@+id/text"
+                app:layout_constraintTop_toBottomOf="@+id/text"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/talla"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="150dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/talla"
+                android:textSize="36sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="0.506"
+                app:layout_constraintLeft_toRightOf="@+id/sexo"
+                app:layout_constraintRight_toLeftOf="@+id/sexo"
+                app:layout_constraintTop_toBottomOf="@+id/sexo"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/peso"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="93dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/peso"
+                android:textSize="36sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="0.476"
+                app:layout_constraintLeft_toRightOf="@+id/talla"
+                app:layout_constraintRight_toLeftOf="@+id/talla"
+                app:layout_constraintTop_toBottomOf="@+id/talla"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <EditText
+                android:id="@+id/edadu"
+                android:layout_width="84dp"
+                android:layout_height="47dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="8dp"
+                android:editable="false"
+                android:ems="10"
+                android:hint="@string/year"
+                android:inputType="number"
+                android:maxLength="3"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toTopOf="@+id/text"
+                app:layout_constraintHorizontal_bias="0.082"
+                app:layout_constraintLeft_toRightOf="@+id/text"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text"
+                app:layout_constraintVertical_bias="0.489" />
+
+            <EditText
+                android:id="@+id/tallaU"
+                android:layout_width="60dp"
+                android:layout_height="46dp"
+                android:layout_marginLeft="22dp"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="8dp"
+                android:ems="10"
+                android:hint="cm"
+                android:inputType="numberDecimal"
+                android:maxLength="5"
+                android:singleLine="false"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toTopOf="@+id/talla"
+                app:layout_constraintLeft_toRightOf="@+id/talla"
+                app:layout_constraintTop_toBottomOf="@+id/talla"
+                app:layout_constraintVertical_bias="0.51" />
+
+            <EditText
+                android:id="@+id/pesoU"
+                android:layout_width="60dp"
+                android:layout_height="46dp"
+                android:layout_marginLeft="23dp"
+                android:layout_marginStart="23dp"
+                android:ems="10"
+                android:hint="Kg"
+                android:inputType="numberDecimal"
+                android:maxLength="5"
+                android:singleLine="false"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toTopOf="@+id/peso"
+                app:layout_constraintHorizontal_bias="0.591"
+                app:layout_constraintLeft_toRightOf="@+id/tallaU"
+                app:layout_constraintRight_toLeftOf="@+id/tallaU"
+                app:layout_constraintTop_toBottomOf="@+id/peso"
+                app:layout_constraintVertical_bias="0.483" />
+
+            <TextView
+                android:id="@+id/imc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/imc"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="0.507"
+                app:layout_constraintLeft_toRightOf="@+id/peso"
+                app:layout_constraintRight_toLeftOf="@+id/peso"
+                app:layout_constraintTop_toBottomOf="@+id/peso"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/grasa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:text="@string/grasa"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toTopOf="@+id/imc"
+                app:layout_constraintHorizontal_bias="0.274"
+                app:layout_constraintLeft_toRightOf="@+id/pesoU"
+                app:layout_constraintRight_toLeftOf="@+id/pesoU"
+                app:layout_constraintTop_toBottomOf="@+id/imc" />
+
+            <TextView
+                android:id="@+id/rimc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="#"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="0.552"
+                app:layout_constraintLeft_toRightOf="@+id/imc"
+                app:layout_constraintRight_toLeftOf="@+id/imc"
+                app:layout_constraintTop_toBottomOf="@+id/imc"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/pgrasa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="%"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@+id/rimc"
+                app:layout_constraintHorizontal_bias="0.481"
+                app:layout_constraintLeft_toRightOf="@+id/grasa"
+                app:layout_constraintRight_toLeftOf="@+id/grasa"
+                app:layout_constraintTop_toBottomOf="@+id/rimc"
+                app:layout_constraintVertical_bias="0.52" />
+
+            <ImageButton
+                android:id="@+id/generoF"
+                android:layout_width="53dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="18dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/borde_redondo"
+                android:onClick="sexo"
+                app:layout_constraintBottom_toTopOf="@+id/sexo"
+                app:layout_constraintLeft_toRightOf="@+id/sexo"
+                app:layout_constraintTop_toBottomOf="@+id/sexo"
+                app:layout_constraintVertical_bias="0.504"
+                app:srcCompat="@mipmap/chica" />
+
+            <ImageButton
+                android:id="@+id/generoM"
+                android:layout_width="53dp"
+                android:layout_height="51dp"
+                android:layout_marginLeft="19dp"
+                android:background="@drawable/borde_redondo"
+                android:onClick="sexo"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toTopOf="@+id/sexo"
+                app:layout_constraintLeft_toRightOf="@+id/sexo"
+                app:layout_constraintTop_toBottomOf="@+id/sexo"
+                app:layout_constraintVertical_bias="0.457"
+                app:srcCompat="@mipmap/man"
+                android:layout_marginStart="19dp" />
+
+            <ImageButton
+                android:id="@+id/imageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/borde_redondo"
+                android:onClick="acercade"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@mipmap/informacion" />
+
+            <Button
+                android:id="@+id/btnCm"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/borde_btn_r"
+                android:onClick="uTalla"
+                android:text="Cm"
+                android:textColor="@color/colorIcons"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toTopOf="@+id/tallaU"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toRightOf="@+id/tallaU"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tallaU"
+                app:layout_constraintVertical_bias="0.549" />
+
+            <Button
+                android:id="@+id/btnKg"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/borde_btn_r"
+                android:onClick="uPeso"
+                android:text="Kg"
+                android:textColor="@color/colorIcons"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toTopOf="@+id/pesoU"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toRightOf="@+id/pesoU"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pesoU" />
+
+            <TextView
+                android:id="@+id/informacion"
+                android:layout_width="227dp"
+                android:layout_height="47dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:textSize="30sp"
+                app:layout_constraintBottom_toBottomOf="@+id/rimc"
+                app:layout_constraintHorizontal_bias="0.446"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pgrasa"
+                app:layout_constraintVertical_bias="0.02" />
+
+            <TableLayout
+                android:id="@+id/tableLayout2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:stretchColumns="0,1"
+                app:layout_constraintTop_toBottomOf="@+id/cuerpos"
+                tools:layout_editor_absoluteX="8dp"
+                android:layout_marginTop="8dp">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#dedede">
+
+                    <TextView
+                        android:id="@+id/textView7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_span="3"
+                        android:gravity="center"
+                        android:text="@string/titulo_imc" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#e62424">
+
+                    <TextView
+                        android:id="@+id/textView8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/infrapeso"
+                        android:textColor="#ffffff" />
+
+                    <TextView
+                        android:id="@+id/textView9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/Menor_de_18_50"
+                        android:textColor="#ffffff" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/dSevera"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Delgadez_severa" />
+
+                    <TextView
+                        android:id="@+id/textView11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/menorDe16" />
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/dModerada"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/delgadez_moderada" />
+
+                    <TextView
+                        android:id="@+id/textView13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="16.00 - 16,90" />
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/dAceptable"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/delgadez_aceptable" />
+
+                    <TextView
+                        android:id="@+id/textView15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="17.00 - 18.49" />
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/normal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#6eae2a">
+
+                    <TextView
+                        android:id="@+id/textView16"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/normal"
+                        android:textColor="#ffffff" />
+
+                    <TextView
+                        android:id="@+id/textView17"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="18.50 - 24.99"
+                        android:textColor="#ffffff" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#e4792c">
+
+                    <TextView
+                        android:id="@+id/textView18"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/sobrepeso"
+                        android:textColor="#ffffff" />
+
+                    <TextView
+                        android:id="@+id/textView19"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/mayor_igual_25"
+                        android:textColor="#ffffff" />
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/preobeso"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView20"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/preobeso" />
+
+                    <TextView
+                        android:id="@+id/textView21"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="25.00 - 29,99" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#d92222">
+
+                    <TextView
+                        android:id="@+id/textView22"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/obeso"
+                        android:textColor="#ffffff" />
+
+                    <TextView
+                        android:id="@+id/textView23"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/mayorigual30"
+                        android:textColor="#ffffff" />
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/obesoI"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView24"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/obesoI" />
+
+                    <TextView
+                        android:id="@+id/textView25"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="30.00 - 34.99" />
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/obesoII"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView27"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/obesoII" />
+
+                    <TextView
+                        android:id="@+id/textView28"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="35.00 - 39.99" />
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/obesoIII"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView30"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ObesoIII" />
+
+                    <TextView
+                        android:id="@+id/textView31"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/mayorigual40" />
+
+                </TableRow>
+
+            </TableLayout>
+
+            <TableLayout
+                android:id="@+id/pGCF"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:stretchColumns="0,1"
+                app:layout_constraintTop_toBottomOf="@+id/tableLayout2"
+                tools:layout_editor_absoluteX="0dp">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#dedede">
+
+                    <TextView
+                        android:id="@+id/textView32"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_span="3"
+                        android:gravity="center"
+                        android:text="@string/tituloPGCF" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/pInsuficienteF"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+
+                        android:id="@+id/textView33"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/esoInsuficiente"
+                        android:textColor="#e62424" />
+
+                    <TextView
+                        android:id="@+id/textView34"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/menor20" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/normopesoF"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView35"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/normopeso"
+                        android:textColor="#6eae2a" />
+
+                    <TextView
+                        android:id="@+id/textView36"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="20,0% - 30,0%" />
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/sobrepesoF"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView37"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/sobrepeso"
+                        android:textColor="#fa622f" />
+
+                    <TextView
+                        android:id="@+id/textView38"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="30,1% - 35,0%" />
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/obesidadF"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView39"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/obesidad"
+                        android:textColor="#e62424" />
+
+                    <TextView
+                        android:id="@+id/textView40"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/mayor35" />
+
+                </TableRow>
+
+            </TableLayout>
+
+
+            <TableLayout
+                android:id="@+id/pGCM"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:stretchColumns="0,1"
+                app:layout_constraintTop_toBottomOf="@+id/tableLayout2"
+                tools:layout_editor_absoluteX="0dp">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#dedede">
+
+                    <TextView
+                        android:id="@+id/textView41"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_span="3"
+                        android:gravity="center"
+                        android:text="@string/tituloPGCM" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/pInsuficienteM"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+
+                        android:id="@+id/textView42"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/esoInsuficiente"
+                        android:textColor="#e62424" />
+
+                    <TextView
+                        android:id="@+id/textView43"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/menor10" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/normopesoM"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView44"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/normopeso"
+                        android:textColor="#6eae2a" />
+
+                    <TextView
+                        android:id="@+id/textView45"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="10,0% - 20,0%" />
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/sobrepesoM"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView46"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/sobrepeso"
+                        android:textColor="#fa622f" />
+
+                    <TextView
+                        android:id="@+id/textView47"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="20,1% - 25,0%" />
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/obesidadM"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView48"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/obesidad"
+                        android:textColor="#e62424" />
+
+                    <TextView
+                        android:id="@+id/textView49"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/mayor25" />
+
+                </TableRow>
+
+            </TableLayout>
+
+            <ImageView
+                android:id="@+id/cuerpos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/bm"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/informacion"
+                android:layout_marginRight="8dp"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginLeft="8dp"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
+</LinearLayout>

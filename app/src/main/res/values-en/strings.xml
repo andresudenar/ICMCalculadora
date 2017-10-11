@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BMI Calculator</string>
+    <string name="edad">Age</string>
+    <string name="sexo">Gender</string>
+    <string name="talla">Height</string>
+    <string name="peso">Weight</string>
+    <string name="year">Years</string>
+    <string name="imc">BMI</string>
+    <string name="grasa">Fat</string>
+    <string name="titulo_imc">Body Mass Index - BMI (Kg/m2)</string>
+    <string name="infrapeso">Underweight</string>
+    <string name="Menor_de_18_50">less than 18.50</string>
+    <string name="Delgadez_severa">Severe thinness</string>
+    <string name="menorDe16">less than 16.00</string>
+    <string name="delgadez_moderada">Moderate thinness</string>
+    <string name="delgadez_aceptable">Acceptable thinness</string>
+    <string name="normal">Normal</string>
+    <string name="sobrepeso">Overweight</string>
+    <string name="mayor_igual_25">Greater than or equal to 25.00</string>
+    <string name="preobeso">Pre obese</string>
+    <string name="obeso">Obese</string>
+    <string name="mayorigual30">Greater than or equal to 30.00</string>
+    <string name="obesoI">Obese type I</string>
+    <string name="obesoII">Obese type II</string>
+    <string name="ObesoIII">Obese type III</string>
+    <string name="mayorigual40">Greater than or equal to 40</string>
+    <string name="tituloPGCF">Body Fat Percentage - BFP (%) Women</string>
+    <string name="esoInsuficiente">Not enough weight</string>
+    <string name="menor20">less than 20%</string>
+    <string name="normopeso">Normal weight</string>
+    <string name="obesidad">Obesity</string>
+    <string name="mayor35">Greater than 35.0%</string>
+    <string name="tituloPGCM">Percent Body Fat - PBF (%) Men</string>
+    <string name="menor10">less than 10.0%</string>
+    <string name="mayor25">Greater than 250%</string>
+    <string name="kilogramos">Kilograms</string>
+    <string name="libras">Pounds</string>
+    <string name="mujer">Woman</string>
+    <string name="hombre">Man</string>
+    <string name="centimetros">Centimeters</string>
+    <string name="pulgadas">Inches</string>
+    <string name="importante">BMI and BFP are calculated. Both results are estimative, based on statistical data of population and only applies to sedentary people</string>
+    <string name="tituloImportante">Important.</string>
+    <string name="creador">Created by Andrés Felipe Burbano Salazar</string>
+
+</resources>
